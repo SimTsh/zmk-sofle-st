@@ -22,6 +22,9 @@
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
 
+## Keymap editor
+https://nickcoutsos.github.io/keymap-editor/
+
 ## Sofle Keymap
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)

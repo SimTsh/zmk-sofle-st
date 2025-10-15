@@ -80,11 +80,11 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - )
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - (
+  - PgUp
+  - {t: (, h: )}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '-', s: _}
   - {t: '7', s: '&'}
@@ -93,11 +93,11 @@ layers:
   - PG UP
   - F12
   - Ins
-  - {t: ']', s: '}'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '[', s: '{'}
+  - PgDn
+  - {t: '[', h: ']', s: '{'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - +
   - {t: '4', s: $}
@@ -110,7 +110,7 @@ layers:
   - Ctl+X
   - Ctl+C
   - Ctl+V
-  - {t: '''', s: '"'}
+  - {t: '"', h: ''''}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '*'
   - {t: '1', s: '!'}

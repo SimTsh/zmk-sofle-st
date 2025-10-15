@@ -61,7 +61,7 @@ layers:
   - $$mdi:keyboard-space$$
   - Ins
   - {t: '$$mdi:backspace$$', type: backspace}
-  - layer2
+  - Controls
   - $$mdi:apple-keyboard-shift$$
   - Symbols
   - $$mdi:backspace-reverse-outline$$
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  layer2:
+  Controls:
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}

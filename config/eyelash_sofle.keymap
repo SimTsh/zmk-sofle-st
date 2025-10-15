@@ -99,7 +99,7 @@
 &trans     &trans        &trans          &trans          &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            display-name = "layer2";
+            display-name = "Controls";
             sensor-bindings = <&scroll_encoder>;
         };
 

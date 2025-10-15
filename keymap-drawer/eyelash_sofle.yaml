@@ -61,9 +61,9 @@ layers:
   - $$mdi:keyboard-space$$
   - Ins
   - {t: '$$mdi:backspace$$', type: backspace}
-  - Controls
-  - $$mdi:apple-keyboard-shift$$
   - Symbols
+  - $$mdi:apple-keyboard-shift$$
+  - layer4
   - $$mdi:backspace-reverse-outline$$
   Nav&Num:
   - {t: '`', s: '~'}
@@ -191,9 +191,9 @@ layers:
   - {t: RETURN, h: '$$mdi:keyboard-tab$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Controls:
   - '~'
@@ -256,7 +256,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -323,7 +323,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   '5':
   - {t: '$$mdi:transfer$$', type: trans}

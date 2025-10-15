@@ -172,8 +172,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '*'
-  - {t: /, h: \, s: '?'}
   - {t: '?', h: '%'}
+  - {t: /, h: \, s: '?'}
   - {t: ., h: '*', s: '>'}
   - {t: '{', h: '}'}
   - {t: '$$mdi:transfer$$', type: trans}

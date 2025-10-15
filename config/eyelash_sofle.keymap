@@ -53,11 +53,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1        &kp N2        &kp N3          &kp N4  &kp N5       &kp UP_ARROW     &kp N6         &kp N7  &kp N8           &kp N9   &kp N0      &kp LEFT_BRACKET
-&kp TAB     &kp Q         &kp W         &kp E           &kp R   &kp T        &kp DOWN_ARROW   &kp Y          &kp U   &kp I            &kp O    &kp P       &kp RIGHT_BRACKET
-&kp CAPS    &kp A         &kp S         &kp D           &kp F   &kp G        &kp LEFT_ARROW   &kp H          &kp J   &kp K            &kp L    &kp SEMI    &kp APOS
-&kp LCTRL   &kp Z         &kp X         &kp C           &kp V   &kp B        &kp RIGHT_ARROW  &kp N          &kp M   &kp COMMA        &kp DOT  &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1   &kp SPACE    &kp ENTER        &kp BACKSPACE  &mo 3   &kp RIGHT_SHIFT  &mo 2    &kp DELETE
+&kp ESC     &kp N1        &kp N2        &kp N3          &kp N4  &kp N5       &kp PAGE_UP    &kp N6         &kp N7  &kp N8           &kp N9   &kp N0          &kp LEFT_BRACKET
+&kp TAB     &kp Q         &kp W         &kp E           &kp R   &kp T        &kp PAGE_DOWN  &kp Y          &kp U   &kp I            &kp O    &kp P           &kp RIGHT_BRACKET
+&kp CAPS    &kp A         &kp S         &kp D           &kp F   &kp G        &kp HOME       &kp H          &kp J   &kp K            &kp L    &mt SEMI COLON  &kp APOS
+&kp LCTRL   &kp Z         &kp X         &kp C           &kp V   &kp B        &kp END        &kp N          &kp M   &kp COMMA        &kp DOT  &kp FSLH        &kp ENTER
+&kp C_MUTE  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1   &kp SPACE    &kp INSERT     &kp BACKSPACE  &mo 3   &kp RIGHT_SHIFT  &mo 2    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -66,11 +66,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1                 &kp F2     &kp F3     &kp F4     &kp F5                  &mmv MOVE_UP    &kp F6        &kp F7  &kp F8  &kp F9   &kp F10    &kp F11
-&trans      &kp RIGHT_PARENTHESIS  &kp HOME   &kp UP     &kp END    &kp LEFT_PARENTHESIS    &kp N9          &kp MINUS     &kp N7  &kp N8  &kp N9   &kp PG_UP  &kp F12
-&kp INSERT  &kp RBKT               &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT                &mmv MOVE_LEFT  &kp PLUS      &kp N4  &kp N5  &kp N6   &kp PG_DN  &trans
-&kp RETURN  &kp LC(Z)              &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp SINGLE_QUOTE        &kp SQT         &kp ASTERISK  &kp N1  &kp N2  &kp N3   &kp BSLH   &kp DEL
-&kp C_MUTE  &trans                 &trans     &trans     &trans     &trans                  &mkp LCLK       &kp RSHFT     &trans  &kp N0  &kp DOT  &kp EQUAL
+&kp GRAVE   &kp F1                 &kp F2     &kp F3     &kp F4     &kp F5                  &mmv MOVE_UP     &kp F6        &kp F7  &kp F8  &kp F9   &kp F10    &kp F11
+&trans      &kp RIGHT_PARENTHESIS  &kp HOME   &kp UP     &kp END    &kp LEFT_PARENTHESIS    &mmv MOVE_DOWN   &kp MINUS     &kp N7  &kp N8  &kp N9   &kp PG_UP  &kp F12
+&kp INSERT  &kp RBKT               &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT                &mmv MOVE_LEFT   &kp PLUS      &kp N4  &kp N5  &kp N6   &kp PG_DN  &trans
+&kp RETURN  &kp LC(Z)              &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp SINGLE_QUOTE        &mmv MOVE_RIGHT  &kp ASTERISK  &kp N1  &kp N2  &kp N3   &kp BSLH   &kp DEL
+&mkp MB3    &trans                 &trans     &trans     &trans     &trans                  &mkp LCLK        &kp RSHFT     &trans  &kp N0  &kp DOT  &kp EQUAL
             >;
 
             display-name = "Nav&Num";
@@ -79,14 +79,14 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans         &trans          &trans            &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LESS_THAN  &kp MINUS       &kp GREATER_THAN  &kp LEFT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &kp UNDERSCORE  &kp EQUAL         &kp LEFT_BRACKET        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans          &kp DOT           &kp SINGLE_QUOTE        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans          &trans            &kp TAB                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans                          &trans                &trans                      &trans                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp MINUS     &mt PIPE RS(AMPS)               &kp MINUS             &mt GREATER_THAN LESS_THAN  &mt LEFT_PARENTHESIS RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PLUS      &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp UNDERSCORE        &kp EQUAL                   &mt LEFT_BRACKET RIGHT_BRACKET            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ASTERISK  &mt SLASH BACKSLASH             &mt PERCENT QUESTION  &mt DOT ASTERISK            &mt LEFT_BRACE RIGHT_BRACE                &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans                          &trans                &trans                      &mt TAB RETURN                            &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "layer3";
+            display-name = "Symbols";
             sensor-bindings = <&scroll_encoder>;
         };
 

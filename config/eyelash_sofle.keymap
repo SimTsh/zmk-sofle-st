@@ -66,11 +66,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1                 &kp F2     &kp F3     &kp F4     &kp F5                  &mmv MOVE_UP     &kp F6        &kp F7  &kp F8  &kp F9   &kp F10    &kp F11
-&trans      &kp RIGHT_PARENTHESIS  &kp HOME   &kp UP     &kp END    &kp LEFT_PARENTHESIS    &mmv MOVE_DOWN   &kp MINUS     &kp N7  &kp N8  &kp N9   &kp PG_UP  &kp F12
-&kp INSERT  &kp RBKT               &kp LEFT   &kp DOWN   &kp RIGHT  &kp LBKT                &mmv MOVE_LEFT   &kp PLUS      &kp N4  &kp N5  &kp N6   &kp PG_DN  &trans
-&kp RETURN  &kp LC(Z)              &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp SINGLE_QUOTE        &mmv MOVE_RIGHT  &kp ASTERISK  &kp N1  &kp N2  &kp N3   &kp BSLH   &kp DEL
-&mkp MB3    &trans                 &trans     &trans     &trans     &trans                  &mkp LCLK        &kp RSHFT     &trans  &kp N0  &kp DOT  &kp EQUAL
+&kp GRAVE   &kp F1          &kp F2          &kp F3           &kp F4         &kp F5                                    &mmv MOVE_UP     &kp F6        &kp F7  &kp F8  &kp F9   &kp F10    &kp F11
+&trans      &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP    &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS    &mmv MOVE_DOWN   &kp MINUS     &kp N7  &kp N8  &kp N9   &kp PG_UP  &kp F12
+&kp INSERT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &mt RIGHT_BRACKET LEFT_BRACKET            &mmv MOVE_LEFT   &kp PLUS      &kp N4  &kp N5  &kp N6   &kp PG_DN  &trans
+&kp RETURN  &kp LC(Z)       &kp LC(X)       &kp LC(C)        &kp LC(V)      &mt SINGLE_QUOTE DOUBLE_QUOTES            &mmv MOVE_RIGHT  &kp ASTERISK  &kp N1  &kp N2  &kp N3   &kp BSLH   &kp DEL
+&mkp MB3    &trans          &trans          &trans           &trans         &trans                                    &mkp LCLK        &kp RSHFT     &trans  &kp N0  &kp DOT  &kp EQUAL
             >;
 
             display-name = "Nav&Num";

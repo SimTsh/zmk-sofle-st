@@ -230,8 +230,8 @@
         ij_del_line: ij_del_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(Y)>;
-            label = "IJ_DEL_LINE"; // Ctrl+Y — Delete Line
+            bindings = <&kp LC(X)>;
+            label = "IJ_DEL_LINE"; // Ctrl+X — Delete Line
         };
         ij_reformat: ij_reformat {
             compatible = "zmk,behavior-macro";

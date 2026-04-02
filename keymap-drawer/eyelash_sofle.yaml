@@ -196,58 +196,63 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Customs:
+  # Row 0
+  - Hide
+  - {t: Term, h: Run}
+  - {t: Proj, h: Commit}
+  - {t: C.Hier, h: Cls.Hier}
+  - Find
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - Git
+  - Services
+  - Problems
+  - {t: Debug, h: Eval}
+  - {t: '$$mdi:transfer$$', type: trans}
+  # Row 1
+  - Switcher
+  - {t: Decl, h: Impl}
+  - {t: 'Blk<', h: '-Occ'}
+  - {t: Usages, h: F.Str}
+  - {t: L.Edit, h: Recent}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Mv Up', h: Join}
+  - {t: 'Goto Test', h: 'Goto Super'}
+  - Override
+  - Send to Claude
+  - Step Out
   - {t: '$$mdi:transfer$$', type: trans}
+  # Row 2
+  - Tgl Case
+  - {t: 'Nav Back', h: Shrink}
+  - {t: 'Blk>', h: '+Occ'}
+  - {t: 'Nav Fwd', h: Expand}
+  - {t: Fix, h: Param}
+  - {t: Q.Def, h: Q.Doc}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Mv Dn', h: Dupe}
+  - Refactor
+  - Generate
+  - Surround
+  - {t: 'Step>', h: 'Step>>'}
   - {t: '$$mdi:transfer$$', type: trans}
+  # Row 3
   - {t: '$$mdi:transfer$$', type: trans}
+  - Stop
+  - {t: Run, h: 'Run Cur'}
+  - {t: '//', h: '/**/'}
+  - Paste Hist
+  - {t: 'Next Err', h: 'Prev Err'}
   - {t: '$$mdi:transfer$$', type: trans}
+  - Del Line
   - {t: '$$mdi:transfer$$', type: trans}
+  - Reformat
+  - Opt Imp
+  - Resume
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  # Row 4 (thumb)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

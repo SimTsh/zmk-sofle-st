@@ -9,6 +9,60 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// ============================================================
+// IntelliJ Layer — Keycode Aliases (used in hold-tap pairs)
+// ============================================================
+
+// Panels
+#define IJ_TERM_KC        LA(F12)          // Alt+F12        — Terminal
+#define IJ_RUN_PNL_KC     LA(N4)           // Alt+4          — Run Panel
+#define IJ_PROJ_KC        LA(N1)           // Alt+1          — Project Panel
+#define IJ_COMMIT_KC      LA(N0)           // Alt+0          — Commit Panel
+#define IJ_CALL_HIER_KC   LC(LA(H))        // Ctrl+Alt+H     — Call Hierarchy
+#define IJ_CLS_HIER_KC    LC(H)            // Ctrl+H         — Class Hierarchy
+#define IJ_DEBUG_PNL_KC   LA(N5)           // Alt+5          — Debug Panel
+#define IJ_EVAL_KC        LA(F8)           // Alt+F8         — Evaluate Expression
+
+// Navigation
+#define IJ_DECL_KC        LC(B)            // Ctrl+B         — Go to Declaration
+#define IJ_IMPL_KC        LC(LA(B))        // Ctrl+Alt+B     — Go to Implementation
+#define IJ_BLK_START_KC   LC(LBKT)         // Ctrl+[         — Block Start
+#define IJ_RM_OCC_KC      LA(LS(J))        // Alt+Shift+J    — Remove Occurrence
+#define IJ_USAGES_KC      LC(LA(F7))       // Ctrl+Alt+F7    — Show Usages
+#define IJ_FILE_STRUCT_KC LC(F12)          // Ctrl+F12       — File Structure
+#define IJ_LAST_EDIT_KC   LC(LS(BSPC))     // Ctrl+Shift+Bsp — Last Edit Location
+#define IJ_RECENT_KC      LC(E)            // Ctrl+E         — Recent Files
+#define IJ_NAV_BACK_KC    LA(LEFT)         // Alt+Left       — Navigate Back
+#define IJ_SHRINK_KC      LC(LS(W))        // Ctrl+Shift+W   — Shrink Selection
+#define IJ_BLK_END_KC     LC(RBKT)         // Ctrl+]         — Block End
+#define IJ_ADD_OCC_KC     LA(J)            // Alt+J          — Add Next Occurrence
+#define IJ_NAV_FWD_KC     LA(RIGHT)        // Alt+Right      — Navigate Forward
+#define IJ_EXPAND_KC      LC(W)            // Ctrl+W         — Expand Selection
+
+// Code Actions
+#define IJ_FIX_KC         LA(ENTER)        // Alt+Enter      — Intention Actions
+#define IJ_PARAM_KC       LC(P)            // Ctrl+P         — Parameter Info
+#define IJ_QDEF_KC        LC(LS(I))        // Ctrl+Shift+I   — Quick Definition
+#define IJ_DOC_KC         LC(Q)            // Ctrl+Q         — Quick Documentation
+#define IJ_COMMENT_KC     LC(FSLH)         // Ctrl+/         — Comment
+#define IJ_BLK_CMT_KC     LC(LS(FSLH))    // Ctrl+Shift+/   — Block Comment
+#define IJ_NEXT_ERR_KC    F2               // F2             — Next Error
+#define IJ_PREV_ERR_KC    LS(F2)           // Shift+F2       — Previous Error
+
+// Run / Debug
+#define IJ_RUN_KC         LA(LS(F10))      // Alt+Shift+F10  — Run Config
+#define IJ_RUN_CUR_KC     LC(LS(F10))      // Ctrl+Shift+F10 — Run Current
+#define IJ_MV_UP_KC       LS(LA(UP))       // Shift+Alt+Up   — Move Line Up
+#define IJ_JOIN_KC        LC(LS(J))        // Ctrl+Shift+J   — Join Lines
+#define IJ_GOTO_TEST_KC   LC(LS(T))        // Ctrl+Shift+T   — Go to Test
+#define IJ_SUPER_KC       LC(U)            // Ctrl+U         — Go to Super
+#define IJ_MV_DN_KC       LS(LA(DOWN))     // Shift+Alt+Down — Move Line Down
+#define IJ_DUPE_KC        LC(D)            // Ctrl+D         — Duplicate Line
+#define IJ_STEP_OVER_KC   F8               // F8             — Step Over
+#define IJ_STEP_IN_KC     F7               // F7             — Step Into
+
+// ============================================================
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -57,6 +111,14 @@
     };
 
     behaviors {
+        ij_ht: ij_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "IJ_HT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -82,6 +144,134 @@
                 <&kp LEFT_SHIFT &mkp MB3>;
 
             label = "SHIFT_MCLK";
+        };
+
+        // ── Panels ──────────────────────────────────────────────────────────
+        ij_hide: ij_hide {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(ESCAPE)>;
+            label = "IJ_HIDE"; // Shift+Esc — Hide Active Panel
+        };
+        ij_find: ij_find {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N3)>;
+            label = "IJ_FIND"; // Alt+3 — Find Panel
+        };
+        ij_git: ij_git {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N9)>;
+            label = "IJ_GIT"; // Alt+9 — Git Panel
+        };
+        ij_services: ij_services {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N8)>;
+            label = "IJ_SERVICES"; // Alt+8 — Services Panel
+        };
+        ij_problems: ij_problems {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N6)>;
+            label = "IJ_PROBLEMS"; // Alt+6 — Problems Panel
+        };
+        ij_switcher: ij_switcher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "IJ_SWITCHER"; // Ctrl+Tab — Switcher
+        };
+        ij_claude: ij_claude {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(K))>;
+            label = "IJ_CLAUDE"; // Ctrl+Alt+K — Send to Claude Code
+        };
+
+        // ── Code Actions ────────────────────────────────────────────────────
+        ij_toggle_case: ij_toggle_case {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(U))>;
+            label = "IJ_TOGGLE_CASE"; // Ctrl+Shift+U — Toggle Case
+        };
+        ij_override: ij_override {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(O)>;
+            label = "IJ_OVERRIDE"; // Ctrl+O — Override Methods
+        };
+        ij_generate: ij_generate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(INSERT)>;
+            label = "IJ_GENERATE"; // Alt+Insert — Generate
+        };
+        ij_refactor: ij_refactor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LS(T)))>;
+            label = "IJ_REFACTOR"; // Ctrl+Alt+Shift+T — Refactor This
+        };
+        ij_surround: ij_surround {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(T))>;
+            label = "IJ_SURROUND"; // Ctrl+Alt+T — Surround With
+        };
+        ij_paste_hist: ij_paste_hist {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(V))>;
+            label = "IJ_PASTE_HIST"; // Ctrl+Shift+V — Paste from History
+        };
+        ij_del_line: ij_del_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Y)>;
+            label = "IJ_DEL_LINE"; // Ctrl+Y — Delete Line
+        };
+        ij_reformat: ij_reformat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(L))>;
+            label = "IJ_REFORMAT"; // Ctrl+Alt+L — Reformat Code
+        };
+        ij_opt_imp: ij_opt_imp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(O))>;
+            label = "IJ_OPT_IMP"; // Ctrl+Alt+O — Optimize Imports
+        };
+
+        // ── Run / Debug ──────────────────────────────────────────────────────
+        ij_stop: ij_stop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F2)>;
+            label = "IJ_STOP"; // Ctrl+F2 — Stop
+        };
+        ij_step_out: ij_step_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F8)>;
+            label = "IJ_STEP_OUT"; // Shift+F8 — Step Out
+        };
+        ij_resume: ij_resume {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F9>;
+            label = "IJ_RESUME"; // F9 — Resume
+        };
+
+        // ── Sequence ─────────────────────────────────────────────────────────
+        ij_join: ij_join {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP)>, <&kp LC(LS(J))>;
+            label = "IJ_JOIN"; // Shift+Up, Ctrl+Shift+J — select line above then join
         };
     };
 
@@ -129,10 +319,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&ij_hide  &ij_ht IJ_RUN_PNL_KC IJ_TERM_KC  &ij_ht IJ_COMMIT_KC IJ_PROJ_KC  &ij_ht IJ_CLS_HIER_KC IJ_CALL_HIER_KC  &ij_find  &trans  &trans    &trans  &ij_git  &ij_services  &ij_problems  &ij_ht IJ_EVAL_KC IJ_DEBUG_PNL_KC  &trans
+&ij_switcher  &ij_ht IJ_IMPL_KC IJ_DECL_KC  &ij_ht IJ_RM_OCC_KC IJ_BLK_START_KC  &ij_ht IJ_FILE_STRUCT_KC IJ_USAGES_KC  &ij_ht IJ_RECENT_KC IJ_LAST_EDIT_KC  &trans  &trans    &ij_ht IJ_JOIN_KC IJ_MV_UP_KC  &ij_ht IJ_SUPER_KC IJ_GOTO_TEST_KC  &ij_override  &ij_claude  &ij_step_out  &trans
+&ij_toggle_case  &ij_ht IJ_SHRINK_KC IJ_NAV_BACK_KC  &ij_ht IJ_ADD_OCC_KC IJ_BLK_END_KC  &ij_ht IJ_EXPAND_KC IJ_NAV_FWD_KC  &ij_ht IJ_PARAM_KC IJ_FIX_KC  &ij_ht IJ_DOC_KC IJ_QDEF_KC  &trans    &ij_ht IJ_DUPE_KC IJ_MV_DN_KC  &ij_refactor  &ij_generate  &ij_surround  &ij_ht IJ_STEP_IN_KC IJ_STEP_OVER_KC  &trans
+&trans  &ij_stop  &ij_ht IJ_RUN_CUR_KC IJ_RUN_KC  &ij_ht IJ_BLK_CMT_KC IJ_COMMENT_KC  &ij_paste_hist  &ij_ht IJ_PREV_ERR_KC IJ_NEXT_ERR_KC  &trans    &ij_del_line  &trans  &ij_reformat  &ij_opt_imp  &ij_resume  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 

@@ -216,7 +216,7 @@ layers:
   - {t: 'Ctl+Sft+$$mdi:backspace$$', h: Ctl+E}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&ij_join_ht LS(LA(UP))'
+  - {t: 'Sft+Alt+$$mdi:arrow-up-bold$$', h: '&ij_join N0'}
   - {t: Ctl+Sft+T, h: Ctl+U}
   - '&ij_override'
   - '&ij_claude'
@@ -238,7 +238,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&ij_stop'
   - {t: Alt+Sft+F10, h: Ctl+Sft+F10}
-  - '&ij_javadoc_ht LC(FSLH)'
+  - {t: Ctl+/, h: '&ij_javadoc N0', s: 'Ctl+?'}
   - '&ij_paste_hist'
   - {t: F2, h: Sft+F2}
   - {t: '$$mdi:transfer$$', type: trans}

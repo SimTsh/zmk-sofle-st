@@ -243,13 +243,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&kp LA(UP)>,
-                <&kp HOME>,
                 <&kp FSLH>,
                 <&kp ASTERISK>,
                 <&kp ASTERISK>,
                 <&kp ENTER>;
-            label = "IJ_JAVADOC"; // Alt+Up, Home, /**, Enter — Generate Javadoc
+            label = "IJ_JAVADOC"; // /**, Enter — Generate Javadoc
         };
         ij_db: ij_db {
             compatible = "zmk,behavior-macro";
@@ -356,8 +354,8 @@
         layer_3 {
             bindings = <
 &ij_hide  &ij_ht IJ_RUN_PNL_KC IJ_TERM_KC  &ij_ht IJ_COMMIT_KC IJ_PROJ_KC  &ij_ht IJ_CLS_HIER_KC IJ_CALL_HIER_KC  &ij_find  &ij_db  &trans    &trans  &ij_git  &ij_services  &ij_problems  &ij_ht IJ_EVAL_KC IJ_DEBUG_PNL_KC  &trans
-&ij_ht IJ_PREV_DIFF_KC IJ_NEXT_DIFF_KC  &ij_ht IJ_IMPL_KC IJ_DECL_KC  &ij_ht IJ_RM_OCC_KC IJ_BLK_START_KC  &ij_ht IJ_FILE_STRUCT_KC IJ_USAGES_KC  &ij_ht IJ_RECENT_KC IJ_LAST_EDIT_KC  &trans  &trans    &ij_join_ht N0 IJ_MV_UP_KC  &ij_ht IJ_SUPER_KC IJ_GOTO_TEST_KC  &ij_override  &ij_claude  &ij_step_out  &trans
-&ij_toggle_case  &ij_ht IJ_SHRINK_KC IJ_NAV_BACK_KC  &ij_ht IJ_ADD_OCC_KC IJ_BLK_END_KC  &ij_ht IJ_EXPAND_KC IJ_NAV_FWD_KC  &ij_ht IJ_PARAM_KC IJ_FIX_KC  &ij_ht IJ_DOC_KC IJ_QDEF_KC  &trans    &ij_ht IJ_DUPE_KC IJ_MV_DN_KC  &ij_refactor  &ij_generate  &ij_surround  &ij_ht IJ_STEP_IN_KC IJ_STEP_OVER_KC  &trans
+&ij_ht IJ_PREV_DIFF_KC IJ_NEXT_DIFF_KC  &ij_ht IJ_RM_OCC_KC IJ_BLK_START_KC  &ij_ht IJ_IMPL_KC IJ_DECL_KC  &ij_ht IJ_ADD_OCC_KC IJ_BLK_END_KC  &ij_ht IJ_RECENT_KC IJ_LAST_EDIT_KC  &trans  &trans    &ij_join_ht N0 IJ_MV_UP_KC  &ij_ht IJ_SUPER_KC IJ_GOTO_TEST_KC  &ij_override  &ij_claude  &ij_step_out  &trans
+&ij_toggle_case  &ij_ht IJ_SHRINK_KC IJ_NAV_BACK_KC  &ij_ht IJ_FILE_STRUCT_KC IJ_USAGES_KC  &ij_ht IJ_EXPAND_KC IJ_NAV_FWD_KC  &ij_ht IJ_PARAM_KC IJ_FIX_KC  &ij_ht IJ_DOC_KC IJ_QDEF_KC  &trans    &ij_ht IJ_DUPE_KC IJ_MV_DN_KC  &ij_refactor  &ij_generate  &ij_surround  &ij_ht IJ_STEP_IN_KC IJ_STEP_OVER_KC  &trans
 &trans  &ij_stop  &ij_ht IJ_RUN_CUR_KC IJ_RUN_KC  &ij_javadoc_ht N0 IJ_COMMENT_KC  &ij_paste_hist  &ij_ht IJ_PREV_ERR_KC IJ_NEXT_ERR_KC  &trans    &ij_del_line  &ij_vcs  &ij_reformat  &ij_opt_imp  &ij_resume  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;

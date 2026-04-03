@@ -156,8 +156,8 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |---|---|---|---|---|---|---|---|
 | R0 | Hide Panel | <u>Terminal</u><br>*Run Panel* | <u>Project</u><br>*Commit* | <u>Call Hierarchy</u><br>*Class Hierarchy* | Find Panel | DB (Alt+D) | ___ |
-| R1 | <u>Next Diff</u><br>*Prev Diff* | <u>Decl</u><br>*Impl* | <u>Block Start</u><br>*Remove Occ* | <u>Show Usages</u><br>*File Structure* | <u>Last Edit</u><br>*Recent Files* | | ___ |
-| R2 | Toggle Case | <u>Nav Back</u><br>*Shrink Sel* | <u>Block End</u><br>*Add Next Occ* | <u>Nav Forward</u><br>*Expand Sel* | <u>Intention Actions</u><br>*Param Info* | <u>Quick Definition</u><br>*Quick Doc* | ___ |
+| R1 | <u>Next Diff</u><br>*Prev Diff* | <u>Block Start</u><br>*Remove Occ* | <u>Decl</u><br>*Impl* | <u>Block End</u><br>*Add Next Occ* | <u>Last Edit</u><br>*Recent Files* | | ___ |
+| R2 | Toggle Case | <u>Nav Back</u><br>*Shrink Sel* | <u>Show Usages</u><br>*File Structure* | <u>Nav Forward</u><br>*Expand Sel* | <u>Intention Actions</u><br>*Param Info* | <u>Quick Definition</u><br>*Quick Doc* | ___ |
 | R3 | | Stop | <u>Run Config</u><br>*Run Current* | <u>Comment</u><br>*Javadoc* | Paste History | <u>Next Error</u><br>*Prev Error* | ___ |
 | R4 | ___ | | | | | | |
 
@@ -200,4 +200,4 @@ Guiding principles:
 ---
 ## remaining
 - VCS operation
-- Java doc macros alt+up -> home -> /** enter
+- Java doc macro: /** + Enter (no navigation — cursor must be pre-positioned)

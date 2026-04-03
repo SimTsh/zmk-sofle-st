@@ -45,7 +45,6 @@
 #define IJ_QDEF_KC        LC(LS(I))        // Ctrl+Shift+I   — Quick Definition
 #define IJ_DOC_KC         LC(Q)            // Ctrl+Q         — Quick Documentation
 #define IJ_COMMENT_KC     LC(FSLH)         // Ctrl+/         — Comment
-#define IJ_BLK_CMT_KC     LC(LS(FSLH))    // Ctrl+Shift+/   — Block Comment
 #define IJ_NEXT_ERR_KC    F2               // F2             — Next Error
 #define IJ_PREV_ERR_KC    LS(F2)           // Shift+F2       — Previous Error
 
@@ -53,13 +52,14 @@
 #define IJ_RUN_KC         LA(LS(F10))      // Alt+Shift+F10  — Run Config
 #define IJ_RUN_CUR_KC     LC(LS(F10))      // Ctrl+Shift+F10 — Run Current
 #define IJ_MV_UP_KC       LS(LA(UP))       // Shift+Alt+Up   — Move Line Up
-#define IJ_JOIN_KC        LC(LS(J))        // Ctrl+Shift+J   — Join Lines
 #define IJ_GOTO_TEST_KC   LC(LS(T))        // Ctrl+Shift+T   — Go to Test
 #define IJ_SUPER_KC       LC(U)            // Ctrl+U         — Go to Super
 #define IJ_MV_DN_KC       LS(LA(DOWN))     // Shift+Alt+Down — Move Line Down
 #define IJ_DUPE_KC        LC(D)            // Ctrl+D         — Duplicate Line
 #define IJ_STEP_OVER_KC   F8               // F8             — Step Over
 #define IJ_STEP_IN_KC     F7               // F7             — Step Into
+#define IJ_NEXT_DIFF_KC   F7               // F7             — Next Difference
+#define IJ_PREV_DIFF_KC   LS(F7)           // Shift+F7       — Previous Difference
 
 // ============================================================
 
@@ -119,6 +119,24 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        ij_javadoc_ht: ij_javadoc_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "IJ_JAVADOC_HT";
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&ij_javadoc>, <&kp>;
+        };
+
+        ij_join_ht: ij_join_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "IJ_JOIN_HT";
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&ij_join>, <&kp>;
+        };
     };
 
     combos {
@@ -177,12 +195,6 @@
             bindings = <&kp LA(N6)>;
             label = "IJ_PROBLEMS"; // Alt+6 — Problems Panel
         };
-        ij_switcher: ij_switcher {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>;
-            label = "IJ_SWITCHER"; // Ctrl+Tab — Switcher
-        };
         ij_claude: ij_claude {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -226,6 +238,30 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(V))>;
             label = "IJ_PASTE_HIST"; // Ctrl+Shift+V — Paste from History
+        };
+        ij_javadoc: ij_javadoc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(UP)>,
+                <&kp HOME>,
+                <&kp FSLH>,
+                <&kp ASTERISK>,
+                <&kp ASTERISK>,
+                <&kp ENTER>;
+            label = "IJ_JAVADOC"; // Alt+Up, Home, /**, Enter — Generate Javadoc
+        };
+        ij_db: ij_db {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(D)>;
+            label = "IJ_DB"; // Alt+D — Database (custom)
+        };
+        ij_vcs: ij_vcs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE)>;
+            label = "IJ_VCS"; // Alt+` — VCS Operations Popup
         };
         ij_del_line: ij_del_line {
             compatible = "zmk,behavior-macro";
@@ -319,14 +355,14 @@
 
         layer_3 {
             bindings = <
-&ij_hide  &ij_ht IJ_RUN_PNL_KC IJ_TERM_KC  &ij_ht IJ_COMMIT_KC IJ_PROJ_KC  &ij_ht IJ_CLS_HIER_KC IJ_CALL_HIER_KC  &ij_find  &trans  &trans    &trans  &ij_git  &ij_services  &ij_problems  &ij_ht IJ_EVAL_KC IJ_DEBUG_PNL_KC  &trans
-&ij_switcher  &ij_ht IJ_IMPL_KC IJ_DECL_KC  &ij_ht IJ_RM_OCC_KC IJ_BLK_START_KC  &ij_ht IJ_FILE_STRUCT_KC IJ_USAGES_KC  &ij_ht IJ_RECENT_KC IJ_LAST_EDIT_KC  &trans  &trans    &ij_ht IJ_JOIN_KC IJ_MV_UP_KC  &ij_ht IJ_SUPER_KC IJ_GOTO_TEST_KC  &ij_override  &ij_claude  &ij_step_out  &trans
+&ij_hide  &ij_ht IJ_RUN_PNL_KC IJ_TERM_KC  &ij_ht IJ_COMMIT_KC IJ_PROJ_KC  &ij_ht IJ_CLS_HIER_KC IJ_CALL_HIER_KC  &ij_find  &ij_db  &trans    &trans  &ij_git  &ij_services  &ij_problems  &ij_ht IJ_EVAL_KC IJ_DEBUG_PNL_KC  &trans
+&ij_ht IJ_PREV_DIFF_KC IJ_NEXT_DIFF_KC  &ij_ht IJ_IMPL_KC IJ_DECL_KC  &ij_ht IJ_RM_OCC_KC IJ_BLK_START_KC  &ij_ht IJ_FILE_STRUCT_KC IJ_USAGES_KC  &ij_ht IJ_RECENT_KC IJ_LAST_EDIT_KC  &trans  &trans    &ij_join_ht IJ_MV_UP_KC  &ij_ht IJ_SUPER_KC IJ_GOTO_TEST_KC  &ij_override  &ij_claude  &ij_step_out  &trans
 &ij_toggle_case  &ij_ht IJ_SHRINK_KC IJ_NAV_BACK_KC  &ij_ht IJ_ADD_OCC_KC IJ_BLK_END_KC  &ij_ht IJ_EXPAND_KC IJ_NAV_FWD_KC  &ij_ht IJ_PARAM_KC IJ_FIX_KC  &ij_ht IJ_DOC_KC IJ_QDEF_KC  &trans    &ij_ht IJ_DUPE_KC IJ_MV_DN_KC  &ij_refactor  &ij_generate  &ij_surround  &ij_ht IJ_STEP_IN_KC IJ_STEP_OVER_KC  &trans
-&trans  &ij_stop  &ij_ht IJ_RUN_CUR_KC IJ_RUN_KC  &ij_ht IJ_BLK_CMT_KC IJ_COMMENT_KC  &ij_paste_hist  &ij_ht IJ_PREV_ERR_KC IJ_NEXT_ERR_KC  &trans    &ij_del_line  &trans  &ij_reformat  &ij_opt_imp  &ij_resume  &trans
+&trans  &ij_stop  &ij_ht IJ_RUN_CUR_KC IJ_RUN_KC  &ij_javadoc_ht IJ_COMMENT_KC  &ij_paste_hist  &ij_ht IJ_PREV_ERR_KC IJ_NEXT_ERR_KC  &trans    &ij_del_line  &ij_vcs  &ij_reformat  &ij_opt_imp  &ij_resume  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "Customs";
+            display-name = "IntelliJ";
             sensor-bindings = <&scroll_encoder>;
         };
 

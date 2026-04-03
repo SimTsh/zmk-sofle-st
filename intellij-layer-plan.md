@@ -75,6 +75,8 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 | `F2` | Next Error/Warning | High | ✓ |
 | `Shift+F2` | Previous Error/Warning | Medium | ✓ |
 | `Ctrl+F12` | File Structure Popup | Medium | ✓ |
+| `F7` | Next Difference (diff view) | Medium | ✓ |
+| `Shift+F7` | Previous Difference (diff view) | Medium | ✓ |
 | `Ctrl+[` | Move to Code Block Start | Medium | ✓ |
 | `Ctrl+]` | Move to Code Block End | Medium | ✓ |
 
@@ -95,7 +97,7 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 | `Ctrl+Shift+F10` | Run Current File/Test | Medium | ✓ |
 | `Ctrl+Alt+O` | Optimize Imports | Medium | ✓ |
 | `Ctrl+D` | Duplicate Line | High | ✓ |
-| `Ctrl+Y` | Delete Line | High | ✓ |
+| `Ctrl+X` | Delete Line | High | ✓ |
 | `Ctrl+/` | Comment / Uncomment Line | High | ✓ |
 | `Ctrl+Shift+/` | Block Comment | Medium | ✓ |
 | `Ctrl+W` | Expand Selection | Low | ✓ |
@@ -107,6 +109,11 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 | `Ctrl+Shift+V` | Paste from History | Medium | ✓ |
 | `Shift+Alt+Up` | Move Line Up | High | ✓ |
 | `Shift+Alt+Down` | Move Line Down | High | ✓ |
+
+### VCS
+| Shortcut | Action | Priority | Confirmed |
+|---|---|---|---|
+| `Alt+`` ` | VCS Operations Popup | High | ✓ |
 
 ### Run / Debug
 | Shortcut | Action | Priority | Confirmed |
@@ -128,7 +135,7 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 ### Popup & Panel
 | Shortcut | Action | Priority | Confirmed |
 |---|---|---|---|
-| `Ctrl+Tab` | Switcher | High | ✓ |
+| `Ctrl+Tab` | Switcher | High | ~~dropped — Ctrl-hold navigation not viable on tri-layer~~ |
 | `Alt+1` | Project Panel | High | ✓ |
 | `Alt+5` | Debug Panel | Low | ✓ |
 | `Alt+6` | Problems Panel | Low | ✓ |
@@ -148,10 +155,10 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |---|---|---|---|---|---|---|---|
-| R0 | Hide Panel | <u>Terminal</u><br>*Run Panel* | <u>Project</u><br>*Commit* | <u>Call Hierarchy</u><br>*Class Hierarchy* | Find Panel | | ___ |
-| R1 | Switcher | <u>Decl</u><br>*Impl* | <u>Block Start</u><br>*Remove Occ* | <u>Show Usages</u><br>*File Structure* | <u>Last Edit</u><br>*Recent Files* | | ___ |
+| R0 | Hide Panel | <u>Terminal</u><br>*Run Panel* | <u>Project</u><br>*Commit* | <u>Call Hierarchy</u><br>*Class Hierarchy* | Find Panel | DB (Alt+D) | ___ |
+| R1 | <u>Next Diff</u><br>*Prev Diff* | <u>Decl</u><br>*Impl* | <u>Block Start</u><br>*Remove Occ* | <u>Show Usages</u><br>*File Structure* | <u>Last Edit</u><br>*Recent Files* | | ___ |
 | R2 | Toggle Case | <u>Nav Back</u><br>*Shrink Sel* | <u>Block End</u><br>*Add Next Occ* | <u>Nav Forward</u><br>*Expand Sel* | <u>Intention Actions</u><br>*Param Info* | <u>Quick Definition</u><br>*Quick Doc* | ___ |
-| R3 | | Stop | <u>Run Config</u><br>*Run Current* | <u>Comment</u><br>*Block Comment* | Paste History | <u>Next Error</u><br>*Prev Error* | ___ |
+| R3 | | Stop | <u>Run Config</u><br>*Run Current* | <u>Comment</u><br>*Javadoc* | Paste History | <u>Next Error</u><br>*Prev Error* | ___ |
 | R4 | ___ | | | | | | |
 
 **Layer 3 Right side (7×5)**
@@ -159,9 +166,9 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 | | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |---|---|---|---|---|---|---|---|
 | R0 | ___ | | Git | Services | Problems | <u>Debug Panel</u><br>*Eval Expr* | |
-| R1 | ___ | <u>Move Line Up</u><br>*Join Lines* | <u>Go to Test</u><br>*Go to Super* | Override | Send to Claude | Step Out | |
+| R1 | ___ | <u>Move Line Up</u><br>*Join Lines (select+join)* | <u>Go to Test</u><br>*Go to Super* | Override | Send to Claude | Step Out | |
 | R2 | ___ | <u>Move Line Down</u><br>*Dupe Line* | Refactor This | Generate | Surround With | <u>Step Over</u><br>*Step Into* | |
-| R3 | ___ | Delete Line | | Reformat | Optimize Imports | Resume | |
+| R3 | ___ | Delete Line | VCS Popup | Reformat | Optimize Imports | Resume | |
 | R4 | | | | | | ___ | ___ |
 
 Guiding principles:
@@ -193,5 +200,4 @@ Guiding principles:
 ---
 ## remaining
 - VCS operation
-- Java doc macros /** enter
-- Switcher need ctrl holds
+- Java doc macros alt+up -> home -> /** enter

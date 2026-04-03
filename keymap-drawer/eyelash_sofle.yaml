@@ -210,9 +210,9 @@ layers:
   - {t: Alt+5, h: Alt+F8, s: Alt+%}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: F7, h: Sft+F7}
-  - {t: Ctl+B, h: Ctl+Alt+B}
   - {t: 'Ctl+[', h: Alt+Sft+J, s: 'Ctl+{'}
-  - {t: Ctl+Alt+F7, h: Ctl+F12}
+  - {t: Ctl+B, h: Ctl+Alt+B}
+  - {t: 'Ctl+]', h: Alt+J, s: 'Ctl+}'}
   - {t: 'Ctl+Sft+$$mdi:backspace$$', h: Ctl+E}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -224,7 +224,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&ij_toggle_case'
   - {t: 'Alt+$$mdi:arrow-left-bold$$', h: Ctl+Sft+W}
-  - {t: 'Ctl+]', h: Alt+J, s: 'Ctl+}'}
+  - {t: Ctl+Alt+F7, h: Ctl+F12}
   - {t: 'Alt+$$mdi:arrow-right-bold$$', h: Ctl+W}
   - {t: 'Alt+$$mdi:keyboard-return$$', h: Ctl+P}
   - {t: Ctl+Sft+I, h: Ctl+Q}

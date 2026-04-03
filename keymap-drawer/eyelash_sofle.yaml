@@ -195,13 +195,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Customs:
+  IntelliJ:
   - '&ij_hide'
   - {t: Alt+F12, h: Alt+4}
   - {t: Alt+1, h: Alt+0, s: Alt+!}
   - {t: Ctl+Alt+H, h: Ctl+H}
   - '&ij_find'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&ij_db'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&ij_git'
@@ -209,14 +209,14 @@ layers:
   - '&ij_problems'
   - {t: Alt+5, h: Alt+F8, s: Alt+%}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&ij_switcher'
+  - {t: F7, h: Sft+F7}
   - {t: Ctl+B, h: Ctl+Alt+B}
   - {t: 'Ctl+[', h: Alt+Sft+J, s: 'Ctl+{'}
   - {t: Ctl+Alt+F7, h: Ctl+F12}
   - {t: 'Ctl+Sft+$$mdi:backspace$$', h: Ctl+E}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Sft+Alt+$$mdi:arrow-up-bold$$', h: Ctl+Sft+J}
+  - '&ij_join_ht LS(LA(UP))'
   - {t: Ctl+Sft+T, h: Ctl+U}
   - '&ij_override'
   - '&ij_claude'
@@ -238,12 +238,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&ij_stop'
   - {t: Alt+Sft+F10, h: Ctl+Sft+F10}
-  - {t: Ctl+/, h: Ctl+Sft+/, s: 'Ctl+?'}
+  - '&ij_javadoc_ht LC(FSLH)'
   - '&ij_paste_hist'
   - {t: F2, h: Sft+F2}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&ij_del_line'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&ij_vcs'
   - '&ij_reformat'
   - '&ij_opt_imp'
   - '&ij_resume'

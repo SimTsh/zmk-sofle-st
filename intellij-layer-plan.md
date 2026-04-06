@@ -65,8 +65,8 @@ Key: `M↑/↓/←/→` = mouse move · `M1` = left click · `M3` = middle click
 ### Navigation
 | Shortcut | Action | Priority | Confirmed |
 |---|---|---|---|
-| `Alt+Left` | Navigate Back (history) | High | ✓ |
-| `Alt+Right` | Navigate Forward (history) | High | ✓ |
+| `Ctrl+Alt+Left` | Navigate Back (history) | High | ✓ |
+| `Ctrl+Alt+Right` | Navigate Forward (history) | High | ✓ |
 | `Ctrl+B` | Go to Declaration | High | ✓ |
 | `Ctrl+Alt+B` | Go to Implementation | High | ✓ |
 | `Ctrl+Alt+F7` | Show Usages | High | ✓ |

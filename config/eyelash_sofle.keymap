@@ -32,11 +32,11 @@
 #define IJ_FILE_STRUCT_KC LC(F12)          // Ctrl+F12       — File Structure
 #define IJ_LAST_EDIT_KC   LC(LS(BSPC))     // Ctrl+Shift+Bsp — Last Edit Location
 #define IJ_RECENT_KC      LC(E)            // Ctrl+E         — Recent Files
-#define IJ_NAV_BACK_KC    LA(LEFT)         // Alt+Left       — Navigate Back
+#define IJ_NAV_BACK_KC    LC(LA(LEFT))     // Ctrl+Alt+Left  — Navigate Back
 #define IJ_SHRINK_KC      LC(LS(W))        // Ctrl+Shift+W   — Shrink Selection
 #define IJ_BLK_END_KC     LC(RBKT)         // Ctrl+]         — Block End
 #define IJ_ADD_OCC_KC     LA(J)            // Alt+J          — Add Next Occurrence
-#define IJ_NAV_FWD_KC     LA(RIGHT)        // Alt+Right      — Navigate Forward
+#define IJ_NAV_FWD_KC     LC(LA(RIGHT))    // Ctrl+Alt+Right — Navigate Forward
 #define IJ_EXPAND_KC      LC(W)            // Ctrl+W         — Expand Selection
 
 // Code Actions
